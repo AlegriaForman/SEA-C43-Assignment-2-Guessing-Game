@@ -1,0 +1,104 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bio and Sports Guessing Game</title>
+  </head>
+
+    <style>
+      #bio {
+        background-color:black;
+        color:white;
+        text-align:center;
+        padding:5px;
+      }
+      #link {
+        line-height:30px;
+        background-color:#eeeeee;
+        height:820px;
+        width:100px;
+        float:left;
+        padding:5px;
+        font-size:1em;
+      }
+      #ali {
+        width:500px;
+        float:left;
+        padding:10px;
+        font-family: Arial, Verdana, sans-serif;
+        font-size:1em;
+      }
+      #contact {
+        background-color:black;
+        color:white;
+        clear:both;
+        text-align:center;
+        padding:1px;
+      }
+    </style>
+
+    <header id="bio">
+      <h1>Biography</h1>
+    </header>
+
+    <nav id="link">
+      <a href="http://www.louvre.fr/en/departments/paintings">Louvre</a><br>
+      <a href="http://www.wta.org/">Hiking</a><br>
+      <a href="http://espn.go.com/">Sports</a><br>
+      <button type="button" onclick="guessingGame()">Guessing Game</button>
+    </nav>
+
+    <section id="ali">
+      <h1><i>Alegria Forman</i></h1>
+        <p><img src="AliPic.jpeg" alt="HTML5" style="width:130px;height:180px" align="left"/>I am currently working as a paralegal in a lawfirm. I like to broaden my knowledge and have always wanted to learn programming.</p>
+        <p>I like to travel, go for hikes, fond of sports, adore impressionist and classical paintings and enjoy reading classic books. Previously hiked Hurricane Ridge. I am an avid fan of Oscar Wilde.</p>
+
+      <aside>
+        <p><em><u>Hurricane Ridge</u></em></p>
+        <p>Hurricane Ridge is a sub-alpine trail in the Olympic National Park.</p>
+      </aside>
+
+      <article>
+        <p><em><u>Oscar Wilde</u></em></p>
+        <p>The English author Oscar Wilde was part of the "art for art's sake" movement in English literature at the end of the nineteenth century. He is best known for his brilliant, witty comedies including the play The Importance of Being Earnest and his classic novel The Picture of Dorian Gray.</p>
+      </article>
+    </section>
+
+  <footer id="contact">
+    <p>Posted by: Ali Forman | Email:af@gmail.com</p>
+  </footer>
+
+  <script>
+    function guessingGame() {
+    var guess = 0;
+
+    var sport1 = prompt("What sport used a peach basket nailed onto a 10 foot elevated track, its bottom was eventually removed due to players has to manually retrieve the ball after making each point?");
+      if (sport1.toUpperCase() === "BASKETBALL") {
+        guess += 1;
+      }
+
+    var sport2 = prompt("What sport calls its playing field similar to carbon containing mineral which are formed naturally at high temperature and pressure at depths of 87 to 118 miles in the Earth's mantle?");
+      if (sport2.toUpperCase() === "BASEBALL") {
+        guess += 1;
+      }
+
+    var sport3 = prompt("What sport uses a prolate spheroid shaped ball or as we all commonly know as Stewie's head?");
+      if (sport3.toUpperCase() === "FOOTBALL") {
+        guess += 1;
+      }
+
+    var sport4 = prompt("What sport uses a stick to shoot a vulcanized rubber material so appropriately derived from the Scots Gaelic 'puc' or the Irish 'poc' meaning to poke, punch or deliver a blow?");
+      if (sport4.toUpperCase() === "HOCKEY") {
+        guess += 1;
+      }
+
+      if (guess === 4) {
+      alert("You guessed " + guess + " out of 4! You really know your sports, way to go!");
+      } else if (guess === 3){
+      alert("You guessed " + guess + " out of 4! Not too bad. A little rusty though.");
+      } else {
+      alert("You guessed " + guess + " out of 4! You are really bad at this, maybe you should brush-up on your sports.");
+      }
+  }
+  </script>
+
+
